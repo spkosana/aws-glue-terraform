@@ -1,2 +1,2 @@
-region="us-east-2"
-profile="terraform"
+region  = "us-east-2"
+profile = "terraform"
