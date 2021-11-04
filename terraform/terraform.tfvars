@@ -1,2 +1,5 @@
-region  = "us-east-2"
-profile = "terraform"
+region         = "us-east-2"
+profile        = "terraform"
+bucket_name    = "aws-glue-terraform-state-kspr"
+dynamodb_table = "glue-terraform-state"
+tag_name       = "glue-terraform"
