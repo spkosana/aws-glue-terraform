@@ -9,7 +9,8 @@ resource "aws_iam_role_policy_attachment" "role-policy-attachment" {
   for_each = toset([
     "arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole", 
     "arn:aws:iam::aws:policy/AmazonS3FullAccess",
-    "arn:aws:iam::aws:policy/CloudWatchFullAccess"
+    "arn:aws:iam::aws:policy/CloudWatchFullAccess",
+    "arn:aws:iam::aws:policy/AmazonSNSFullAccess"
   ])
 
   role       = aws_iam_role.role.name
