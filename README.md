@@ -90,4 +90,4 @@
 * Type "make destroy" which destroys all the created resources. DO NOT FORGET THIS STEP! I MEAN IT
 &nbsp;
 
-## If any of the above steps are not clear and did not work as expected please feel to let me know. I will do a better job in documenting any missed steps
+### If any of the above steps are not clear and did not work as expected please feel free to let me know. I will do a better job in documenting any missed steps
