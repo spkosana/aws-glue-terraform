@@ -3,9 +3,9 @@
 &nbsp;
 ## Summary: <font size="2">Writing a Glue Etl job to perform the merging of paquet files and deploy it using terraform. Athena is out of scope for this project </font>
 &nbsp;
-### <b><u>Aim:</u></b> <font size="2"><p>To merge small parquet files into larger files. </p> </font>
+### <u>Aim:</u> <font size="2"><p>To merge small parquet files into larger files. </p> </font>
 &nbsp;
-### <b><u> Before ETL Data: Preloaded data from different project - 674000 records</u><b> <font size="2"><p> I have parquet files in my source bucket. Each of the paruqet file sizes are as below: Total 200 Objects. More parquet files , query has to read the all of them to fetch the records that are needed which in turn take time to complete the task.</font>
+### <u> Before ETL Data: Preloaded data from different project - 674000 records</u> <font size="2"><p> I have parquet files in my source bucket. Each of the paruqet file sizes are as below: Total 200 Objects. More parquet files , query has to read the all of them to fetch the records that are needed which in turn take time to complete the task.</font>
 * parquet 1: 111KB
 * parquet 2: 108KB 
 * parquet 3: 120KB </p>
@@ -14,9 +14,9 @@
 * Parquet 1: 15.8MB
 * Parquet 2: 15.8MB
 &nbsp;
-### <b><u>Reason:</u></b> <font size="2"><p>To optmize the query performance from athena and read fewer partitions to achieve the same results</p></font>
+### <u>Reason:</u> <font size="2"><p>To optmize the query performance from athena and read fewer partitions to achieve the same results</p></font>
 &nbsp;
-### <b><u>ETL Tool:</u></b> <font size="2"><p>Glue Serverless ETL :AWS Glue is a fully managed ETL (extract, transform, and load) service that makes it simple and cost-effective to categorize your data, clean it, enrich it, and move it reliably between various data stores and data streams. AWS Glue is designed to work with semi-structured data. It introduces a component called a dynamic frame, which you can use in your ETL scripts. A dynamic frame is similar to an Apache Spark dataframe.With dynamic frames, you get schema flexibility and a set of advanced transformations specifically designed for dynamic frames. You can convert between dynamic frames and Spark dataframes, so that you can take advantage of both AWS Glue and Spark transformations to do the kinds of analysis that you want</p></font>
+### <u>ETL Tool:</u> <font size="2"><p>Glue Serverless ETL :AWS Glue is a fully managed ETL (extract, transform, and load) service that makes it simple and cost-effective to categorize your data, clean it, enrich it, and move it reliably between various data stores and data streams. AWS Glue is designed to work with semi-structured data. It introduces a component called a dynamic frame, which you can use in your ETL scripts. A dynamic frame is similar to an Apache Spark dataframe.With dynamic frames, you get schema flexibility and a set of advanced transformations specifically designed for dynamic frames. You can convert between dynamic frames and Spark dataframes, so that you can take advantage of both AWS Glue and Spark transformations to do the kinds of analysis that you want</p></font>
 &nbsp;
 ## Components in Glue ETL job
  * Glue job script
@@ -38,7 +38,7 @@
 * Repartition the dataframe
 * Write the dyanmic data frame in glue paruqet format at the destination s3 location
 &nbsp;
-## <b><u>Deploy Tool:</u></b> <font size="2"><p>Terraform :Terraform is an infrastructure as code (IaC) tool that allows you to build, change, and version infrastructure safely and efficiently.You describe your infrastructure using Terraform's high-level configuration language in human-readable, declarative configuration files. This allows you to create a blueprint that you can version, share, and reuse.Terraform generates an execution plan describing what it will do and asks for your approval before making any infrastructure changes. This allows you to review changes before Terraform creates, updates, or destroys infrastructure.Terraform can apply complex changesets to your infrastructure with minimal human interaction. When you update configuration files, Terraform determines what changed and creates incremental execution plans that respect dependencies.</p></font>
+## <u>Deploy Tool:</u> <font size="2"><p>Terraform :Terraform is an infrastructure as code (IaC) tool that allows you to build, change, and version infrastructure safely and efficiently.You describe your infrastructure using Terraform's high-level configuration language in human-readable, declarative configuration files. This allows you to create a blueprint that you can version, share, and reuse.Terraform generates an execution plan describing what it will do and asks for your approval before making any infrastructure changes. This allows you to review changes before Terraform creates, updates, or destroys infrastructure.Terraform can apply complex changesets to your infrastructure with minimal human interaction. When you update configuration files, Terraform determines what changed and creates incremental execution plans that respect dependencies.</p></font>
 &nbsp;
 ## Usage of Terraform
   * terraform fmt: Used for formatting all terraform scripts
